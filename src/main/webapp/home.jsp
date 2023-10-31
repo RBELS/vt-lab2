@@ -32,10 +32,18 @@
             width: 220px;
             margin: 20px 15px;
         }
+        .head-container {
+
+        }
     </style>
 </head>
 <body>
-<h2 class="mb-4">Books for Sale</h2>
+<div class="head-container">
+    <h2 class="mb-4">Books for Sale</h2>
+    <a href="${pageContext.request.contextPath}/lang?value=en">en</a>
+    <a href="${pageContext.request.contextPath}/lang?value=ru">ru</a>
+</div>
+
 <div class="container book-list">
     <c:forEach var="book" items="${books}">
         <div class="card book-card">

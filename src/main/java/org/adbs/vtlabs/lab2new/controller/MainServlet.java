@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-@WebServlet(name = "mainServlet", value = "/mainServlet")
+@WebServlet(name = "mainServlet", urlPatterns = "/*")
 public class MainServlet extends HttpServlet {
     private static final HomeController homeController = new HomeController();
     private static final LoginController loginController = new LoginController();
@@ -23,9 +23,9 @@ public class MainServlet extends HttpServlet {
     private static final CreateBookController createBookController = new CreateBookController();
     private static final BooksController booksController = new BooksController();
 
-    private static final Map<String, ControllerEndpoint> getEndpointsMap;
-    private static final Map<String, ControllerEndpoint> postEndpointsMap;
-    private static final Map<String, ControllerEndpoint> deleteEndpointsMap;
+    private static Map<String, ControllerEndpoint> getEndpointsMap;
+    private static Map<String, ControllerEndpoint> postEndpointsMap;
+    private static Map<String, ControllerEndpoint> deleteEndpointsMap;
 
     static {
         getEndpointsMap = new HashMap<>();
@@ -47,6 +47,7 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.getWriter().println("Result");
         dispatchRequest(req, resp, getEndpointsMap);
     }
 

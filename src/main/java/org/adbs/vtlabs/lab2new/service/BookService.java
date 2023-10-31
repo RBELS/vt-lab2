@@ -32,8 +32,10 @@ public class BookService {
         try {
             return bookStorage.save(book);
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new ServiceException(ErrorCode.BAD_REQUEST);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ServiceException(ErrorCode.INTERNAL_ERROR);
         }
     }
@@ -43,6 +45,7 @@ public class BookService {
             return bookStorage.findById(bookId)
                     .orElseThrow();
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ServiceException(ErrorCode.BOOK_NOT_FOUND);
         }
     }

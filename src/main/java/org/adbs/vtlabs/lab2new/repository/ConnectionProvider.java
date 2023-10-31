@@ -16,7 +16,7 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConnectionProvider {
-    public static String CONFIG_PATH = "database.driver-classname";
+    public static String CONFIG_PATH = "/application.properties";
     private static final Integer poolSize = 10;
     private static ConnectionProvider instance;
 
