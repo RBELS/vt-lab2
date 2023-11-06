@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="head-container">
-    <h2 class="mb-4">Books for Sale</h2>
+    <h2 class="mb-4">${lang.title}</h2>
     <a href="${pageContext.request.contextPath}/lang?value=en">en</a>
     <a href="${pageContext.request.contextPath}/lang?value=ru">ru</a>
 </div>
@@ -50,16 +50,16 @@
             <a href="${pageContext.request.contextPath}/book?id=${book.bookId}">
                 <div class="card-body">
                     <h5 class="card-title">${book.name}</h5>
-                    <p class="card-text">Author: ${book.author}</p>
-                    <p class="card-text">Price: ${book.price}</p>
+                    <p class="card-text">${lang.author}: ${book.author}</p>
+                    <p class="card-text">${lang.price}: ${book.price}</p>
                 </div>
             </a>
         </div>
     </c:forEach>
 </div>
 <div class="mt-3">
-    <a href="${pageContext.request.contextPath}/logout" class="btn btn-secondary">Logout</a>
-    <a href="${pageContext.request.contextPath}/create" class="btn btn-secondary">Create</a>
+    <a href="${pageContext.request.contextPath}/logout" class="btn btn-secondary">${lang.logout}</a>
+    <a href="${pageContext.request.contextPath}/create" class="btn btn-secondary">${lang.addBook}</a>
 </div>
 <!-- Подключаем JS Bootstrap (необходим для некоторых компонентов) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>

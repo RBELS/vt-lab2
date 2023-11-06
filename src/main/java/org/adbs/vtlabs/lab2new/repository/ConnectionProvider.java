@@ -2,8 +2,8 @@ package org.adbs.vtlabs.lab2new.repository;
 
 import lombok.SneakyThrows;
 import org.adbs.vtlabs.lab2new.exception.ConnectionPoolBusyException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ public class ConnectionProvider {
     private static ConnectionProvider instance;
 
     private final Map<Connection, Boolean> connectionPool = new ConcurrentHashMap<>();
-    private final Logger log = LoggerFactory.getLogger(ConnectionProvider.class.getName());
+    private final Logger log = LogManager.getLogger(ConnectionProvider.class.getName());
 
     private final String databaseUrl;
     private final String databaseUser;

@@ -10,6 +10,8 @@ import org.adbs.vtlabs.lab2new.components.ObjectMapperProvider;
 import org.adbs.vtlabs.lab2new.exception.InvalidTokenException;
 import org.adbs.vtlabs.lab2new.model.service.User;
 import org.adbs.vtlabs.lab2new.security.EStorePrincipal;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemReader;
 
@@ -28,7 +30,7 @@ public class AuthorityService {
     // It must not change when users exist in the DB
     private static final String SECRET_KEY = "THIS-IS-SERVER-SECRET-KEY";
 
-    private static AuthorityService instance;
+    private static volatile AuthorityService instance;
     @SneakyThrows
     public static synchronized AuthorityService getInstance() {
         if (Objects.isNull(instance)) {
@@ -42,6 +44,7 @@ public class AuthorityService {
     private final Base64.Encoder base64Encoder;
     private final RSAPublicKey publicKey;
     private final RSAPrivateKey privateKey;
+    private static final Logger logger = LogManager.getLogger(AuthorityService.class);
 
     public AuthorityService() throws Exception {
         objectMapper = ObjectMapperProvider.getInstance();
@@ -75,7 +78,7 @@ public class AuthorityService {
                     .build();
             DecodedJWT decodedJwt = verifier.verify(token);
             String jwtPayload = new String(Base64.getDecoder().decode(decodedJwt.getPayload()));
-            System.out.println(jwtPayload);
+            logger.info(jwtPayload);
             return objectMapper.readValue(jwtPayload, EStorePrincipal.class);
         } catch (Exception e) {
             throw new InvalidTokenException();

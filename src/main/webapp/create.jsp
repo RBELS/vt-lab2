@@ -27,25 +27,25 @@
 </head>
 <body>
 <div class="login-form">
-    <h2 class="mb-4">Create book</h2>
+    <h2 class="mb-4">${lang.addBook}</h2>
     <form action="${pageContext.request.contextPath}/create" method="post">
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">${lang.name}</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
         <div class="mb-3">
-            <label for="author" class="form-label">Author</label>
+            <label for="author" class="form-label">${lang.author}</label>
             <input type="text" class="form-control" id="author" name="author" required>
         </div>
         <div class="mb-3">
-            <label for="price" class="form-label">Price</label>
+            <label for="price" class="form-label">${lang.price}</label>
             <input type="text" class="form-control" id="price" name="price" required>
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
+            <label for="description" class="form-label">${lang.description}</label>
             <textarea type="text" class="form-control" id="description" name="description" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">${lang.submit}</button>
     </form>
 </div>
 <!-- Подключаем JS Bootstrap (необходим для некоторых компонентов) -->

@@ -11,9 +11,7 @@ import org.adbs.vtlabs.lab2new.service.AuthorityService;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Stream;
 
 @WebFilter(urlPatterns = {"/*"})
@@ -34,6 +32,12 @@ public class AuthenticationFilter implements Filter {
             return;
         }
 
+        if (Objects.isNull(req.getCookies())) {
+            servletContext.log("No `Authorization` header was provided.");
+            res.setStatus(401);
+            res.sendRedirect(servletContext.getContextPath()+"/login");
+            return;
+        }
         Optional<String> authCookie = Stream.of(req.getCookies())
                 .filter(cookie -> cookie.getName().equals("auth-token"))
                 .findFirst()

@@ -28,20 +28,20 @@
 </head>
 <body>
 <div class="login-form">
-    <h2 class="mb-4">Create Account</h2>
+    <h2 class="mb-4">${lang.createAccount}</h2>
     <form action="${pageContext.request.contextPath}/register" method="post">
         <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
+            <label for="username" class="form-label">${lang.username}</label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label">${lang.password}</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">${lang.register}</button>
     </form>
     <div class="mt-3">
-        <a href="${pageContext.request.contextPath}/login" class="btn btn-secondary">Log In</a>
+        <a href="${pageContext.request.contextPath}/login" class="btn btn-secondary">${lang.loginHeader}</a>
     </div>
 </div>
 <!-- Подключаем JS Bootstrap (необходим для некоторых компонентов) -->

@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.adbs.vtlabs.lab2new.model.service.User;
 import org.adbs.vtlabs.lab2new.service.AuthorityService;
 import org.adbs.vtlabs.lab2new.service.UserService;
+import org.adbs.vtlabs.lab2new.util.CookieExtractor;
 
 import java.io.IOException;
 import java.util.Map;
@@ -17,6 +18,8 @@ public class LoginController {
     private final AuthorityService authorityService = AuthorityService.getInstance();
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Map<String, String> langMap = LangController.langMap.get(CookieExtractor.extractLang(req.getCookies()).orElse("en"));
+        req.setAttribute("lang", langMap);
         req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 

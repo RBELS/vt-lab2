@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.adbs.vtlabs.lab2new.exception.ErrorCode;
 import org.adbs.vtlabs.lab2new.exception.ErrorData;
 import org.adbs.vtlabs.lab2new.exception.ServiceException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -22,10 +24,13 @@ public class MainServlet extends HttpServlet {
     private static final RegisterController registerController = new RegisterController();
     private static final CreateBookController createBookController = new CreateBookController();
     private static final BooksController booksController = new BooksController();
+    private static final LangController langController = new LangController();
 
-    private static Map<String, ControllerEndpoint> getEndpointsMap;
-    private static Map<String, ControllerEndpoint> postEndpointsMap;
-    private static Map<String, ControllerEndpoint> deleteEndpointsMap;
+    private static final Logger logger = LogManager.getLogger(MainServlet.class.getName());
+
+    private static final Map<String, ControllerEndpoint> getEndpointsMap;
+    private static final Map<String, ControllerEndpoint> postEndpointsMap;
+    private static final Map<String, ControllerEndpoint> deleteEndpointsMap;
 
     static {
         getEndpointsMap = new HashMap<>();
@@ -35,6 +40,7 @@ public class MainServlet extends HttpServlet {
         getEndpointsMap.put("register", registerController::doGet);
         getEndpointsMap.put("create", createBookController::doGet);
         getEndpointsMap.put("book", booksController::doGet);
+        getEndpointsMap.put("lang", langController::doGet);
 
         postEndpointsMap = new HashMap<>();
         postEndpointsMap.put("login", loginController::doPost);
@@ -47,7 +53,6 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("Result");
         dispatchRequest(req, resp, getEndpointsMap);
     }
 
@@ -78,6 +83,7 @@ public class MainServlet extends HttpServlet {
 
     private void dispatchError(HttpServletRequest req, HttpServletResponse resp, ErrorCode errorCode) throws ServletException, IOException {
         ErrorData errorData = ErrorCode.ERROR_DATA.get(errorCode);
+        logger.error(errorData);
         resp.setStatus(errorData.getCode());
         req.setAttribute("error", errorData);
         req.getRequestDispatcher("/error.jsp").forward(req, resp);
