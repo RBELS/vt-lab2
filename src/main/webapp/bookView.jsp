@@ -33,7 +33,7 @@
   </style>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/"><h2 class="mb-4">${lang.home}</h2></a>
+<a href="${pageContext.request.contextPath}/home"><h2 class="mb-4">${lang.home}</h2></a>
 <div class="container book-list">
     <div class="card book-card">
       <div class="card-body">
@@ -47,6 +47,7 @@
 </div>
 <div class="mt-3">
   <a onclick="sendDelete('${pageContext.request.contextPath}', ${book.bookId})" class="btn btn-danger">${lang.removeBook}</a>
+  <a href="${pageContext.request.contextPath}/edit?id=${book.bookId}" class="btn btn-primary">${lang.editBook}</a>
 </div>
 <!-- Подключаем JS Bootstrap (необходим для некоторых компонентов) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>

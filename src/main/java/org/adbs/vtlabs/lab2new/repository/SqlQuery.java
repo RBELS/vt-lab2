@@ -9,5 +9,5 @@ public class SqlQuery {
     public static final String SELECT_BOOK_BY_ID = "SELECT * FROM \"BOOK\" WHERE \"BOOK_ID\" = ?";
     public static final String SAVE_BOOK = "INSERT INTO \"BOOK\" (\"NAME\", \"AUTHOR\", \"PRICE\", \"DESCRIPTION\") VALUES (?, ?, ?, ?)";
     public static final String DELETE_BOOK = "DELETE FROM \"BOOK\" WHERE \"BOOK_ID\" = ?";
-    public static final String UPDATE_BOOK = "UPDATE \"BOOK\" SET \"NAME\" = ?, \"AUTHOR\" = ?, \"PRICE\" = ? WHERE \"BOOK_ID\" = ?";
+    public static final String UPDATE_BOOK = "UPDATE \"BOOK\" SET \"NAME\" = ?, \"AUTHOR\" = ?, \"PRICE\" = ?, \"DESCRIPTION\" = ? WHERE \"BOOK_ID\" = ?";
 }

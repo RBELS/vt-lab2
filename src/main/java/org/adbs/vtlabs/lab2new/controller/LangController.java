@@ -31,6 +31,7 @@ public class LangController {
         enMap.put("home", "Home");
         enMap.put("name", "Name");
         enMap.put("submit", "Submit");
+        enMap.put("editBook", "Edit Book");
 
         Map<String, String> ruMap = new HashMap<>();
         ruMap.put("title", "Книжный магазин");
@@ -49,6 +50,7 @@ public class LangController {
         ruMap.put("home", "На домашнюю страницу");
         ruMap.put("name", "Название");
         ruMap.put("submit", "Подтвердить");
+        ruMap.put("editBook", "Редактировать");
 
         langMap.put("en", enMap);
         langMap.put("ru", ruMap);

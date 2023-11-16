@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -25,6 +26,7 @@ public class MainServlet extends HttpServlet {
     private static final CreateBookController createBookController = new CreateBookController();
     private static final BooksController booksController = new BooksController();
     private static final LangController langController = new LangController();
+    private static final EditController editController = new EditController();
 
     private static final Logger logger = LogManager.getLogger(MainServlet.class.getName());
 
@@ -41,11 +43,13 @@ public class MainServlet extends HttpServlet {
         getEndpointsMap.put("create", createBookController::doGet);
         getEndpointsMap.put("book", booksController::doGet);
         getEndpointsMap.put("lang", langController::doGet);
+        getEndpointsMap.put("edit", editController::doGet);
 
         postEndpointsMap = new HashMap<>();
         postEndpointsMap.put("login", loginController::doPost);
         postEndpointsMap.put("register", registerController::doPost);
         postEndpointsMap.put("create", createBookController::doPost);
+        postEndpointsMap.put("edit", editController::doPost);
 
         deleteEndpointsMap = new HashMap<>();
         deleteEndpointsMap.put("book", booksController::doDelete);
@@ -91,6 +95,7 @@ public class MainServlet extends HttpServlet {
 
     private String extractCommand(String fullUrl) {
         String[] uriComponents = fullUrl.split("/");
-        return uriComponents.length == 0 ? "home" : uriComponents[1];
+        logger.info(Arrays.toString(uriComponents));
+        return uriComponents.length == 0 ? "home" : uriComponents[uriComponents.length-1];
     }
 }

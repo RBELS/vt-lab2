@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab2new:war exploded" />
+      <artifact name="lab2new:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,24 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72f9e41c-e6f7-4c61-b3f6-c1db7b8cac4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/util/CookieExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/CreateBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/CreateBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/EditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/LangController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/LangController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/ConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/ConnectionProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/AuthorityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/AuthorityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/SqlQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/repository/SqlQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/bookView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +33,9 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -64,31 +58,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/artyom/Documents/study/poit/5sem/vt/vt-labs/lab2new/src/main/webapp/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.62873566",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/artyom/Documents/study/poit/5sem/vt/vt-labs/lab2new/src/main/webapp/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.62873566&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
@@ -156,22 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookServiceTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab2new" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.adbs.vtlabs.lab2new.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.adbs.vtlabs.lab2new.service" />
-      <option name="MAIN_CLASS_NAME" value="org.adbs.vtlabs.lab2new.service.BookServiceTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BookServiceTest.getAllBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab2new" />
       <extension name="coverage">
@@ -188,12 +167,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in lab2new" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2new" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.13" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.13" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="lab2new:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/lab2new-1.0-SNAPSHOT" />
           </settings>
         </artifact>
       </deployment>
@@ -276,20 +263,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.java in lab2new" />
       <item itemvalue="JUnit.All in lab2new" />
       <item itemvalue="JUnit.BookServiceTest.addNewBook" />
-      <item itemvalue="JUnit.BookServiceTest.deleteById" />
       <item itemvalue="JUnit.BookServiceTest" />
       <item itemvalue="JUnit.BookServiceTest.getAllBooks" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.13" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in lab2new" />
         <item itemvalue="JUnit.BookServiceTest" />
         <item itemvalue="JUnit.BookServiceTest.getAllBooks" />
         <item itemvalue="JUnit.BookServiceTest.addNewBook" />
         <item itemvalue="JUnit.All in lab2new" />
-        <item itemvalue="JUnit.BookServiceTest.deleteById" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +322,12 @@
       <workItem from="1698955641848" duration="173000" />
       <workItem from="1699004826584" duration="20000" />
       <workItem from="1699198113395" duration="1553000" />
-      <workItem from="1699256027975" duration="4956000" />
+      <workItem from="1699256027975" duration="8932000" />
+      <workItem from="1699294892240" duration="35000" />
+      <workItem from="1699299148099" duration="562000" />
+      <workItem from="1699299787401" duration="91000" />
+      <workItem from="1699303310747" duration="8000" />
+      <workItem from="1700132723949" duration="983000" />
     </task>
     <servers />
   </component>
@@ -345,11 +337,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/SomeTest.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/RegisterController.java</url>
           <line>32</line>
@@ -371,19 +358,39 @@
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/HomeController.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/LoginController.java</url>
           <line>20</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/filter/AuthenticationFilter.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="62" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/EditController.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/EditController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/BookService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/service/BookService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/EditController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adbs/vtlabs/lab2new/controller/MainServlet.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

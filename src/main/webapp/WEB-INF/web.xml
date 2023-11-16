@@ -30,6 +30,7 @@
         <url-pattern>/home.jsp</url-pattern>
         <url-pattern>/bookView.jsp</url-pattern>
         <url-pattern>/create.jsp</url-pattern>
+        <url-pattern>/edit.jsp</url-pattern>
         <url-pattern>/error.jsp</url-pattern>
     </servlet-mapping>
 

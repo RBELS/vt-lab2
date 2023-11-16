@@ -57,4 +57,12 @@ public class BookService {
             throw new ServiceException(ErrorCode.BOOK_NOT_FOUND);
         }
     }
+
+    public Book updateBook(Book newData) {
+        try {
+            return bookStorage.saveForUpdate(newData);
+        } catch (Exception e) {
+            throw new ServiceException(ErrorCode.BOOK_NOT_FOUND);
+        }
+    }
 }

@@ -84,8 +84,8 @@ public class BookRepository {
             statement.setString(1, bookEntity.getName());
             statement.setString(2, bookEntity.getAuthor());
             statement.setBigDecimal(3, bookEntity.getPrice());
-            statement.setLong(4, bookEntity.getBookId());
-            statement.setString(5, bookEntity.getDescription());
+            statement.setString(4, bookEntity.getDescription());
+            statement.setLong(5, bookEntity.getBookId());
             statement.execute();
             return findById(bookEntity.getBookId()).orElseThrow();
         } finally {
